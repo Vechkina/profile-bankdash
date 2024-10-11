@@ -1,0 +1,36 @@
+@import "./../../styles/constants.scss";
+@import "./../../styles/mixins.scss";
+
+.avatar__wrapper {
+  margin-top: 3px;
+  position: relative;
+  display: inline-block;
+
+  @include respond-to("large") {
+    margin-top: 0;
+  }
+}
+
+.avatar-big {
+  width: 130px;
+  height: auto;
+
+  @include respond-to("large") {
+    height: 170px;
+    width: auto;
+  }
+}
+
+.avatar__icon-edit {
+  position: absolute;
+  bottom: 16px;
+  right: 0;
+  width: 30px;
+  height: auto;
+  cursor: pointer;
+
+  @include respond-to("small") {
+    bottom: 21px;
+    width: 38px;
+  }
+}

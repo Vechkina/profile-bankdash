@@ -1,0 +1,81 @@
+@mixin flexbox($align: null) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  -webkit-box-align: $align;
+  -ms-flex-align: $align;
+  align-items: $align;
+}
+
+@mixin justify-center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+@mixin flex-start {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+@mixin flex-end {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+@mixin space-between {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+@mixin column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+@mixin gap($gap-column: null, $gap-row: null) {
+  -webkit-column-gap: $gap-column;
+  -moz-column-gap: $gap-column;
+  column-gap: $gap-column;
+
+  row-gap: $gap-row;
+}
+
+@mixin rounded($radius: $border-radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin cover {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+@mixin transformX($transformX: 50%) {
+  -webkit-transform: translateX($transformX);
+  -ms-transform: translateX($transformX);
+  transform: translateX($transformX);
+}
+
+@mixin transformY($transformY: 50%) {
+  -webkit-transform: translateY($transformY);
+  -ms-transform: translateY($transformY);
+  transform: translateY($transformY);
+}
+
+@mixin respond-to($media) {
+  @if $media == "large" {
+    @media (max-width: 1100px) { @content; }
+  } @else if $media == "medium" {
+    @media (max-width: 768px) { @content; }
+  } @else if $media == "small" {
+    @media (max-width: 500px) { @content; }
+  }
+}

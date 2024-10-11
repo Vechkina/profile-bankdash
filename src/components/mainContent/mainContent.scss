@@ -1,0 +1,46 @@
+@import "./../../styles/constants.scss";
+@import "./../../styles/mixins.scss";
+
+.main-content {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background-color: $secondary-color;
+  height: 100%;
+
+  &__wrapper {
+    @include rounded(25px);
+    margin: 55px 20px 30px 64px;
+    background-color: $background-color;
+
+    @include respond-to("large") {
+      margin: 25px;
+    }
+  }
+
+  .main-content__container {
+    max-width: 1176px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 12px 30px 30px 6px;
+
+    @include respond-to("large") {
+      padding: 22px 20px 25px;
+    }
+
+    @include respond-to("small") {
+      padding: 19px 20px 25px;
+    }
+
+    .main-content__body {
+      @include flexbox(center);
+      @include flex-start;
+      @include gap(50px);
+
+      @include respond-to("large") {
+        @include flexbox(center);
+        @include column;
+      }
+    }
+  }
+}

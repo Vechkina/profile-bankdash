@@ -1,0 +1,66 @@
+@import "./../../styles/constants.scss";
+@import "./../../styles/mixins.scss";
+
+.navigation {
+  margin-left: 16px;
+  margin-bottom: 63px;
+
+  @include respond-to("large") {
+    margin-left: 0;
+    margin-bottom: 25px;
+  }
+
+  @include respond-to("small") {
+    margin-bottom: 34px;
+  }
+
+  &__list {
+    @include flexbox(center);
+    @include gap(75px);
+
+    @include respond-to("large") {
+      @include justify-center;
+    }
+
+    @include respond-to("small") {
+      @include gap(40px);
+    }
+
+    li {
+      position: relative;
+    }
+  }
+}
+
+.navigation__link {
+  font-size: 16px;
+  font-weight: 500;
+  color: $text-color;
+
+  @include respond-to("small") {
+    font-size: 13px;
+  }
+
+  &:hover {
+    color: $primary-color;
+  }
+
+  &--active {
+    color: $primary-color;
+  }
+}
+
+.line {
+  @include transformX(-50%);
+  position: absolute;
+  width: 114px;
+  height: 3px;
+  bottom: -10px;
+  background-color: $primary-color;
+  left: 50%;
+
+  @include respond-to("small") {
+    width: 80px;
+    height: 2px;
+  }
+}

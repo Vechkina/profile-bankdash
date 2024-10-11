@@ -1,0 +1,19 @@
+@import "constants.scss";
+@import "mixins.scss";
+
+body {
+  font-family: "Inter", sans-serif;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.main-wrapper {
+  @include flexbox;
+  @include flex-start;
+  height: calc(100vh - ($header-height));
+  width: 100%;
+
+  @include respond-to("large") {
+    height: 100%;
+  }
+}

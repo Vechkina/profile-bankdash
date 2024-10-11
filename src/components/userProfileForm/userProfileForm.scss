@@ -1,0 +1,94 @@
+@import "./../../styles/constants.scss";
+@import "./../../styles/mixins.scss";
+
+.form {
+  @include respond-to("large") {
+    width: 100%;
+  }
+
+  @include respond-to("small") {
+    width: 100%;
+  }
+
+  fieldset {
+    padding-left: 5px;
+    padding-right: 20px;
+    @include flexbox(center);
+    @include flex-end;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    @include gap(29px, 21px);
+
+    @include respond-to("large") {
+      @include flexbox(center);
+      @include column;
+      padding: 22px 0 0;
+    }
+
+    @include respond-to("small") {
+      row-gap: 17px;
+    }
+
+    .form__btn {
+      margin-top: 10px;
+      margin-bottom: 25px;
+      width: auto;
+      padding: 14px 74px;
+      color: #fff;
+      background-color: $primary-color;
+      @include rounded(15px);
+      font-weight: 500;
+      font-size: 18px;
+
+      @include respond-to("small") {
+        width: 100%;
+        font-size: 15px;
+        margin-top: 0;
+        padding: 11px 74px;
+        @include rounded(8px);
+      }
+    }
+  }
+}
+
+.form__input {
+  @include flexbox;
+  @include column;
+  max-width: 418px;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 calc(50% - 29px);
+  flex: 1 1 calc(50% - 29px);
+
+  @include respond-to("large") {
+    width: 80%;
+  }
+
+  @include respond-to("small") {
+    width: 100%;
+  }
+
+  label {
+    font-size: 16px;
+    font-weight: 400;
+    color: #232323;
+    margin-bottom: 12px;
+
+    @include respond-to("small") {
+      font-size: 13px;
+      margin-bottom: 9px;
+    }
+  }
+
+  input {
+    border: 1px solid #dfeaf2;
+    padding: 15px 19px;
+    color: $text-color;
+    @include rounded(15px);
+    font-size: 15px;
+
+    @include respond-to("small") {
+      font-size: 12px;
+      padding: 12px 14px;
+    }
+  }
+}
