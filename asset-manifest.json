@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/profile-bankdash/static/css/main.564baaeb.css",
+    "main.js": "/profile-bankdash/static/js/main.63029487.js",
+    "static/media/avatar.png": "/profile-bankdash/static/media/avatar.91403807bba6a0382ee3.png",
+    "static/media/logo.svg": "/profile-bankdash/static/media/logo.59819d18a2050a9cc87a48618753aea4.svg",
+    "index.html": "/profile-bankdash/index.html",
+    "static/media/burger.svg": "/profile-bankdash/static/media/burger.5da985ecba2476781461b3d0871299c8.svg",
+    "main.564baaeb.css.map": "/profile-bankdash/static/css/main.564baaeb.css.map",
+    "main.63029487.js.map": "/profile-bankdash/static/js/main.63029487.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.564baaeb.css",
+    "static/js/main.63029487.js"
+  ]
+}
